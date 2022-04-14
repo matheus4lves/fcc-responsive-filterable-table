@@ -1,0 +1,27 @@
+table {
+  border-collapse: collapse;
+  block-size: 100%;
+  box-shadow: 0 5px 7px gray;
+}
+
+thead {
+  box-shadow: 0 0 10 gray;
+}
+
+th {
+  padding-block: 1rem;
+  padding-inline: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: start;
+}
+
+td {
+  padding-block: 0.5rem;
+  padding-inline: 3rem;
+  font-size: 1rem;
+}
+
+tr:nth-child(even) {
+  background-color: #dee8f5;
+}
