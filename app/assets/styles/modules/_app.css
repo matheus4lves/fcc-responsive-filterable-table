@@ -1,0 +1,6 @@
+.app {
+  inline-size: 80vw;
+  block-size: 100vh;
+  margin-block: 1.25rem;
+  margin-inline: 0;
+}
