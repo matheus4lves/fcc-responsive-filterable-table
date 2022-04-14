@@ -1,8 +1,11 @@
 #js-search-input {
   border-block: none;
   border-inline: none;
-  block-size: 100%;
+  outline: none;
+  inline-size: 100%;
   margin-block-end: 1.25rem;
+  line-height: 1.15;
+  font-size: 100%;
 }
 
 #js-search-input:focus {
