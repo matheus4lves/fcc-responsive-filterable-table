@@ -1,0 +1,10 @@
+#js-search-input {
+  border-block: none;
+  border-inline: none;
+  block-size: 100%;
+  margin-block-end: 1.25rem;
+}
+
+#js-search-input:focus {
+  border-block-end: 2px solid #4575b6;
+}
