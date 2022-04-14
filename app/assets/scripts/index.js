@@ -11,7 +11,7 @@ const filter = () => {
     let language = column.textContent;
 
     console.log(language.toUpperCase().startsWith(searchTerm));
-    ROWS[i].style.display = language.toUpperCase().startsWith(searchTerm) ? "" : "none";
+    ROWS[i].style.display = language.toUpperCase().includes(searchTerm) ? "" : "none";
   }
 };
 
