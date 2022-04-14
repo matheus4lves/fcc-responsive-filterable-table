@@ -1,6 +1,6 @@
 table {
   border-collapse: collapse;
-  block-size: 100%;
+  inline-size: 100%;
   box-shadow: 0 5px 7px gray;
 }
 
