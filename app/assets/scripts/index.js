@@ -4,6 +4,13 @@ import { DEVELOPERS } from "../data/developers.js";
 const DEVELOPER_NAMES = document.getElementById("js-developer-names");
 
 // Functionality definition
+/* 
+  If you put the template literal in just one line, you do not need to include the return statement,
+  nor the braces:
+
+  const rowTemplate = rowData => `<tr><td>${rowData.name}</td><td>${rowData.age}</td><td>${rowData.language}</td></tr>`;
+
+*/
 const rowTemplate = rowData => {
   return `
   <tr>
@@ -15,12 +22,11 @@ const rowTemplate = rowData => {
 };
 
 const showRows = rows => {
-  DEVELOPER_NAMES.innerHTML = `${rows
+  DEVELOPER_NAMES.innerHTML = rows
     .map(row => {
       return rowTemplate(row);
     })
-    .join("")}
-  `;
+    .join("");
 };
 
 const filter = () => {
