@@ -1,19 +1,37 @@
+import { DEVELOPERS } from "../data/developers.js";
+
 // DOM manipulation
 const DEVELOPER_NAMES = document.getElementById("js-developer-names");
-const ROWS = DEVELOPER_NAMES.getElementsByTagName("tr");
 
-// Definition of functions
+// Functionality definition
+const rowTemplate = rowData => {
+  return `
+  <tr>
+    <td>${rowData.name}</td>
+    <td>${rowData.age}</td>
+    <td>${rowData.language}</td>
+  </tr>
+`;
+};
+
+const showRows = rows => {
+  DEVELOPER_NAMES.innerHTML = `${rows
+    .map(row => {
+      return rowTemplate(row);
+    })
+    .join("")}
+  `;
+};
+
 const filter = () => {
   let searchTerm = document.getElementById("js-search-input").value.toUpperCase();
+  let results = DEVELOPERS.filter(DEVELOPER => {
+    return DEVELOPER.language.toUpperCase().includes(searchTerm) ? DEVELOPER : null;
+  });
 
-  for (i = 0; i < ROWS.length; i++) {
-    let column = ROWS[i].getElementsByTagName("td")[2];
-    let language = column.textContent;
-
-    console.log(language.toUpperCase().startsWith(searchTerm));
-    ROWS[i].style.display = language.toUpperCase().includes(searchTerm) ? "" : "none";
-  }
+  showRows(results);
 };
 
 // Event handling
+document.onload = showRows(DEVELOPERS);
 document.getElementById("js-search-input").addEventListener("keyup", filter);

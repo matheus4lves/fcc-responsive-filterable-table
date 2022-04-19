@@ -1,0 +1,18 @@
+export const DEVELOPERS = [
+  { name: "Kingsley", age: 32, language: "JavaScript" },
+  { name: "Samuel", age: 22, language: "Python" },
+  { name: "Joyce", age: 28, language: "Ruby" },
+  { name: "Jake", age: 29, language: "Python" },
+  { name: "Daniel", age: 40, language: "JavaScript" },
+  { name: "Mary", age: 21, language: "C" },
+  { name: "David", age: 26, language: "JavaScript" },
+  { name: "Kelly", age: 31, language: "React" },
+  { name: "Cleo", age: 43, language: "Java" },
+  { name: "Peter", age: 19, language: "Vue" },
+  { name: "George", age: 59, language: "Cobol" },
+  { name: "James", age: 29, language: "JavaScript" },
+  { name: "Ethan", age: 22, language: "PHP" },
+  { name: "Sandra", age: 29, language: "R" },
+  { name: "Pires", age: 34, language: "React Native" },
+  { name: "Martha", age: 30, language: "React" },
+];
